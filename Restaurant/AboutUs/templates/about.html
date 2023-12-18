@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}
 About
 {% endblock %}
@@ -7,4 +7,5 @@ About
 
 {% block content %}
 <h1>About US</h1>
+<img src="{% static 'chef.jpeg' %}" alt="Chef image">
 {% endblock %}
