@@ -1,9 +1,14 @@
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Home
 {% endblock %}
 
 {% block content %}
-<h1>This is Home</h1>
+<div class ='home'>
+    <h1>Welcome to Restaurant by Lobz</h1>
+    <img src="{% static 'images/r1.jpg' %}" class="img-fluid img1" alt="...">
+</div>
+
 {% endblock %}

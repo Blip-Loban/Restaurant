@@ -1,8 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Meals
 {% endblock %}
 
 {% block content %}
-<h1>this is meal</h1>
+<h1>Our menue</h1>
+
+<link rel="stylesheet" href="{% static 'css/meal.css' %}">
+<div class="meals">
+    {% for i in context %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="Food Image">
+        <div class="card-body">
+          <h5 class="card-title">{{i.strCategory}}</h5>
+          <p class="card-text">{{i.strCategoryDescription | truncatewords:10}}</p>
+          <a href="#" class="btn btn-primary">See Details</a>
+        </div>
+      </div>
+      {% endfor %}
+</div>
+
 {% endblock %}
