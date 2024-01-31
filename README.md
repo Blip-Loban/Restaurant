@@ -1,2 +1,2 @@
 # Restaurant
- 
+ Python Practice project
